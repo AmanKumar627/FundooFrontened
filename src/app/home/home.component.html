@@ -1,0 +1,90 @@
+<mat-toolbar class="dashboardToolBar">
+  <div class="iconAndTitle">
+
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon class="mat-18">menu</mat-icon>
+    </button>
+    <img class="fundooIcon" src="../../../assets/fundoo_dp.png">
+
+    <div class="dashboardTitle">{{headerName}}</div>
+
+  </div>
+
+  <div class="searchToolBar">
+
+    <button mat-icon-button>
+      <mat-icon class="mat-18">search</mat-icon>
+    </button>
+    <input class="searchInputBar" type="text" placeholder="search">
+
+  </div>
+
+  <div class="endToolBar">
+
+    <button mat-icon-button>
+      <mat-icon class="mat-18">dashboard</mat-icon>
+    </button>
+
+  </div>
+
+  <button class="accountButton" [matMenuTriggerFor]="accountMenu">D</button>
+
+</mat-toolbar>
+
+<mat-menu #accountMenu="matMenu">
+  <span>Deepankan Tiwari</span>
+  <button mat-menu-item (click)="logout()">
+    <mat-icon class="mat-18">power_settings_new</mat-icon> Logout
+  </button>
+</mat-menu>
+
+<mat-sidenav-container class="sidenavBar">
+
+  <mat-sidenav #sidenav mode="side" opened="true" style="min-width:50px;" class="sideNav">
+
+    <mat-nav-list class="sideNavList">
+
+      <div>
+        <button mat-button [routerLink]="['addNote']" (click)="headerName='Fundoo Notes'" [ngClass]="{'sideNavListItems': headerName!='Fundoo Notes', 'sideNavlistItemsColored': headerName=='Fundoo Notes'}">
+          <mat-icon>lightbulb_outline</mat-icon> Notes
+        </button>
+      </div>
+
+      <div>
+        <button mat-button [routerLink]="['reminders']" (click)="headerName='Reminders'" [ngClass]="{'sideNavListItems': headerName!='Reminders', 'sideNavlistItemsColored': headerName=='Reminders'}">
+          <mat-icon>notifications_none</mat-icon> Reminders
+        </button>
+      </div>
+
+      <div>
+        <button class="sideNavListItems" mat-button>
+          <mat-icon>edit</mat-icon> Labels
+        </button>
+      </div>
+
+      <div>
+        <button mat-button [routerLink]="['archive']" (click)="headerName='Archive'" [ngClass]="{'sideNavListItems': headerName!='Archive', 'sideNavlistItemsColored': headerName=='Archive'}">
+          <mat-icon>archive</mat-icon> Archive
+        </button>
+      </div>
+
+      <div>
+        <button mat-button [routerLink]="['trash']" (click)="headerName='Trash'" [ngClass]="{'sideNavListItems': headerName!='Trash', 'sideNavlistItemsColored': headerName=='Trash'}">
+          <mat-icon>delete</mat-icon> Trash
+        </button>
+      </div>
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    Fundoo Notes
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+  
+
+
+
+
