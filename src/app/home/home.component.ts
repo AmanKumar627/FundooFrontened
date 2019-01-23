@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
-import {MatSnackBar} from '@angular/material';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,21 +10,28 @@ import {MatSnackBar} from '@angular/material';
 })
 export class HomeComponent implements OnInit {
 
-  public headerName = "Fundoo Notes";
-
-
-  constructor(
-    private router: Router,
-    private snackBar: MatSnackBar
-  ) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
+  logout():void{
 
-  logout(){
-    this.router.navigateByUrl('/login');
-this.snackBar.open('Logout Successful', 'Okay', { duration: 3000 })
+    this.router.navigate([""])
+  }
+  note():void{
+    this.router.navigate(["addNote"])
+  }
+  remainder():void{
+    this.router.navigate(["remainder"])
+  }
+  archive():void{
+    this.router.navigate(["archive"])
+  }
+  trash():void{
+    this.router.navigate(["trash"])
   }
 }
+
+
 
 

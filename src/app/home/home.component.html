@@ -4,9 +4,9 @@
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon class="mat-18">menu</mat-icon>
     </button>
-    <img class="fundooIcon" src="../../../assets/fundoo_dp.png">
+    <img class="fundooIcon" src="/../assets/fundoo_dp.png">
 
-    <div class="dashboardTitle">{{headerName}}</div>
+    <div class="dashboardTitle">Keep</div>
 
   </div>
 
@@ -21,70 +21,78 @@
 
   <div class="endToolBar">
 
+      <button mat-icon-button>
+          <mat-icon class="view_list">view_list</mat-icon>
+          <!-- <mat-icon class="settings">settings</mat-icon> -->
+        </button>
     <button mat-icon-button>
       <mat-icon class="mat-18">dashboard</mat-icon>
+      <!-- <mat-icon class="settings">settings</mat-icon> -->
     </button>
-
+    <button mat-icon-button>
+        <!-- <mat-icon class="mat-18">dashboard</mat-icon> -->
+        <mat-icon class="settings">settings</mat-icon>
+      </button>
+      <button mat-icon-button class="accountButton" [matMenuTriggerFor]="accountMenu">
+          <!-- <mat-icon class="mat-18">dashboard</mat-icon> -->
+          <mat-icon class="account_circle">account_circle</mat-icon>
+        </button>
   </div>
 
-  <button class="accountButton" [matMenuTriggerFor]="accountMenu">D</button>
+  
+  <!-- <button class="accountButton" [matMenuTriggerFor]="accountMenu">R</button> -->
 
 </mat-toolbar>
 
+
 <mat-menu #accountMenu="matMenu">
-  <span>Deepankan Tiwari</span>
+  <span>Ramana Ganesh</span>
   <button mat-menu-item (click)="logout()">
     <mat-icon class="mat-18">power_settings_new</mat-icon> Logout
   </button>
 </mat-menu>
 
-<mat-sidenav-container class="sidenavBar">
-
-  <mat-sidenav #sidenav mode="side" opened="true" style="min-width:50px;" class="sideNav">
-
-    <mat-nav-list class="sideNavList">
-
+      <mat-drawer-container class="example-container">
+          <mat-drawer #sidenav mode="side" opened="true">
       <div>
-        <button mat-button [routerLink]="['addNote']" (click)="headerName='Fundoo Notes'" [ngClass]="{'sideNavListItems': headerName!='Fundoo Notes', 'sideNavlistItemsColored': headerName=='Fundoo Notes'}">
+        <button mat-button  (click)="addNote()" [ngClass]="{'sideNavListItems': headerName!='Fundoo Notes', 'sideNavlistItemsColored': headerName=='Fundoo Notes'}">
           <mat-icon>lightbulb_outline</mat-icon> Notes
-        </button>
+            <button mat-button (click)="remainder()" ></button>
+    </button>
+        
       </div>
-
       <div>
-        <button mat-button [routerLink]="['reminders']" (click)="headerName='Reminders'" [ngClass]="{'sideNavListItems': headerName!='Reminders', 'sideNavlistItemsColored': headerName=='Reminders'}">
+        <button mat-button  (click)="remainder()" [ngClass]="{'sideNavListItems': headerName!='Remainders', 'sideNavlistItemsColored': headerName=='Remainders'}">
           <mat-icon>notifications_none</mat-icon> Reminders
         </button>
       </div>
-
       <div>
         <button class="sideNavListItems" mat-button>
-          <mat-icon>edit</mat-icon> Labels
+          <mat-icon>edit</mat-icon> Edit Labels
         </button>
       </div>
-
       <div>
-        <button mat-button [routerLink]="['archive']" (click)="headerName='Archive'" [ngClass]="{'sideNavListItems': headerName!='Archive', 'sideNavlistItemsColored': headerName=='Archive'}">
+        <button mat-button  (click)="archive()" [ngClass]="{'sideNavListItems': headerName!='Archive', 'sideNavlistItemsColored': headerName=='Archive'}">
           <mat-icon>archive</mat-icon> Archive
         </button>
       </div>
-
       <div>
-        <button mat-button [routerLink]="['trash']" (click)="headerName='Trash'" [ngClass]="{'sideNavListItems': headerName!='Trash', 'sideNavlistItemsColored': headerName=='Trash'}">
+        <button mat-button  (click)="trash()" [ngClass]="{'sideNavListItems': headerName!='Trash', 'sideNavlistItemsColored': headerName=='Trash'}">
           <mat-icon>delete</mat-icon> Trash
         </button>
       </div>
-
-    </mat-nav-list>
-
-  </mat-sidenav>
-
-  <mat-sidenav-content>
-    Fundoo Notes
-  </mat-sidenav-content>
-
-</mat-sidenav-container>
-  
-
-
-
-
+    </mat-drawer>
+        <mat-card class="noteInputBar">
+          <!-- class="noteInputBar">Take a Note -->
+            <!-- <mat-card-header> -->
+                <button mat-button >
+                <mat-card-title (click)="click">Take a Note
+                    
+                        <mat-card-subtitle>This is Sub Title</mat-card-subtitle>
+                      
+                </mat-card-title>
+              </button>
+              <!-- </mat-card-header> -->
+      
+        </mat-card>
+    </mat-drawer-container>

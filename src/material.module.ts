@@ -1,5 +1,8 @@
 import {NgModule} from "@angular/core";
 import { CommonModule } from '@angular/common';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import {
   MatButtonModule, MatCardModule, MatDialogModule, MatInputModule, MatTableModule,
   MatToolbarModule, MatMenuModule,MatIconModule, MatProgressSpinnerModule
@@ -15,7 +18,9 @@ import {
   MatTableModule,
   MatMenuModule,
   MatIconModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatSidenavModule,
+  BrowserAnimationsModule
   ],
   exports: [
   CommonModule,
@@ -27,7 +32,9 @@ import {
    MatTableModule, 
    MatMenuModule,
    MatIconModule,
-   MatProgressSpinnerModule
+   MatProgressSpinnerModule,
+   MatSidenavModule,
+   BrowserAnimationsModule
    ],
 })
 export class CustomMaterialModule { }

@@ -1,84 +1,136 @@
-.dashboardToolBar {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+dashboardToolBar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.iconAndTitle {
+  display: flex;
+
+}
+
+.dashboardTitle {
+  vertical-align: middle;
+  line-height: 49px;
+}
+
+.searchToolBar {
+
+  display: flex;
+  /* //margin: auto; */
+  width: 50%;
+}
+
+.searchInputBar {
+  border-radius: 25px;
+  width: 100%;
+  /* // border: none; */
+  /* outline: none; */
+  padding: 1%;
+  border: 2px solid #73AD21;
+}
+
+.mat-toolbar-single-row {
+  height: 64px;
+}
+/* 
+// .navListItems {
+//   padding: 10px !important;
+// } */
+
+.accountButton {
+  width: 0px;
+  height: 0px;
+  border: 1px solid;
+  border-radius: 0px;
+  font-size: x-large;
+
+}
+
+/* // .sideBar {
+//   display: flex;
+//   // width: 0px;
+//   height: 500px;
+// }
+// .sideNav{
+//     height: 500px   ;
+// } */
+
+.sidenavBar {
+  position: absolute;
+  min-width: 300px;
+  top: 80px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #ffffff;
+}
+
+.sideNavList {
+  width: 300px;
+  height: 98.6%;
+  background-color: #ffffff;
+}
+
+.sideNavListItems,
+.sideNavlistItemsColored {
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  width: 300px;
+  font-size: 15px;
+  padding: 8px;
+  background-color: #ffffff;
+  color: #5f6368;
+  align-items: baseline;
+  text-align: left;
+}
+
+.sideNavlistItemsColored {
+  background-color: #f8e6af !important;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.sideNavListItems .mat-icon,
+.sideNavlistItemsColored .mat-icon {
+  padding-left: 10px;
+  padding-right: 30px;
+}
+
+.sideNavListItems:hover {
+  background-color: #e6e6e6;
+}
+
+.sidenavContent {
+  background-color: rgb(255, 255, 255); 
+  /* // max-width: 600px; */
+  max-width: -webkit-fill-available;
+  margin-left: 200px;
+}
+.center{
+
+  margin-top: 5%;
+  margin-bottom: auto;
+  margin-left:auto;
+  margin-right: auto;
+  width: 50%; 
   }
-  
-  .iconAndTitle {
-    display: flex;
-    padding-right: 115px;
-  
-  }
-  
-  .dashboardTitle {
-    vertical-align: middle;
-    line-height: 49px;
-    padding-left: 15px;
-  }
-  
-  .searchToolBar {
-  
-    display: flex;
-    //margin: auto;
-    width: 100%;
-  }
-  
-  .searchInputBar {
-    width: 70%;
-    border: none;
-    outline: none;
-  }
-  
-  .mat-toolbar-single-row {
-    height: 64px;
-  }
-  
-  .accountButton {
-    width: 30px;
-    height: 30px;
-    border: 1px solid;
-    border-radius: 30px;
-    font-size: x-large;
-  
-  }
-  
-  .sidenavBar {
+  .example-container {
     position: absolute;
-    min-width: 300px;
+    min-width: 250 px;
     top: 80px;
     bottom: 0px;
     left: 0px;
     right: 0px;
     background-color: #ffffff;
+    }
+
+.noteInputBar {
+
+  /* display: flex;
+  padding: 1%; 
+  border: 2px ;
+  width: 40%; */
+  width:600px;
+  margin:0 auto;
+  margin-top: 10px;
   }
-  
-  .sideNavList {
-    width: 300px;
-    height: 98.6%;
-    background-color: #ffffff;
-  }
-  
-  .sideNavListItems,
-  .sideNavlistItemsColored {
-    //border-top-right-radius: 100px;
-    //border-bottom-right-radius: 100px;
-    width: 300px;
-    font-size: 15px;
-    padding: 8px;
-    background-color: #fdcfcf;
-    color: #5f6368;
-    align-items: baseline;
-    text-align: left;
-  }
-  
-  .sideNavlistItemsColored {
-    background-color: #f6bb17 !important;
-    color: rgba(0, 0, 0, 0.8);
-  }
-  
-  .sideNavListItems .mat-icon,
-  .sideNavlistItemsColored .mat-icon {
-    padding-left: 10px;
-    padding-right: 30px;
-  }
-  
