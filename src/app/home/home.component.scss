@@ -1,8 +1,10 @@
-dashboardToolBar {
+.dashboardToolBar {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
+.material-icons.orange600 { color: #FB8C00; };
+
 
 .iconAndTitle {
   display: flex;
@@ -47,14 +49,14 @@ dashboardToolBar {
 
 }
 
-/* // .sideBar {
-//   display: flex;
-//   // width: 0px;
-//   height: 500px;
-// }
-// .sideNav{
-//     height: 500px   ;
-// } */
+ .sideBar {
+   display: flex;
+ width: 0px;
+   height: 500px;
+ }
+ .sideNav{
+    height: 500px   ;
+ }
 
 .sidenavBar {
   position: absolute;
@@ -125,12 +127,16 @@ dashboardToolBar {
     }
 
 .noteInputBar {
-
-  /* display: flex;
-  padding: 1%; 
-  border: 2px ;
-  width: 40%; */
   width:600px;
   margin:0 auto;
   margin-top: 10px;
+  }
+
+  .addNoteInput {
+    border: none;
+    outline: none;
+    resize: none;
+    width: 575px;
+    font-size: 14px;
+  
   }

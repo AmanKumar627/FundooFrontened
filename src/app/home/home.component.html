@@ -1,10 +1,10 @@
 <mat-toolbar class="dashboardToolBar">
   <div class="iconAndTitle">
-
+    
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon class="mat-18">menu</mat-icon>
     </button>
-    <img class="fundooIcon" src="/../assets/fundoo_dp.png">
+    <img class="fundooIcon" >
 
     <div class="dashboardTitle">Keep</div>
 
@@ -44,9 +44,17 @@
 
 </mat-toolbar>
 
+ <mat-menu #settingsForHeader="matMenu">
+             
+    <button mat-menu-item (click)="settings()">Settings</button>
+    <button mat-menu-item (click)="sendFeedback()">Send FeedBack</button>
+    <button mat-menu-item (click)="help()">Help</button>
+    <button mat-menu-item (click)="appDownload()">App Download</button>
+    <button mat-menu-item (click)="keyboardShortcuts()">Keyboard Shortcut</button> -->
+ </mat-menu>
 
 <mat-menu #accountMenu="matMenu">
-  <span>Ramana Ganesh</span>
+  <span>Aman</span>
   <button mat-menu-item (click)="logout()">
     <mat-icon class="mat-18">power_settings_new</mat-icon> Logout
   </button>
@@ -59,8 +67,7 @@
           <mat-icon>lightbulb_outline</mat-icon> Notes
             <button mat-button (click)="remainder()" ></button>
     </button>
-        
-      </div>
+      </div>  
       <div>
         <button mat-button  (click)="remainder()" [ngClass]="{'sideNavListItems': headerName!='Remainders', 'sideNavlistItemsColored': headerName=='Remainders'}">
           <mat-icon>notifications_none</mat-icon> Reminders
@@ -82,17 +89,95 @@
         </button>
       </div>
     </mat-drawer>
-        <mat-card class="noteInputBar">
-          <!-- class="noteInputBar">Take a Note -->
-            <!-- <mat-card-header> -->
-                <button mat-button >
+
+        <!-- <mat-card class="noteInputBar">
+          class="noteInputBar">Take a Note 
+             <mat-card-header> -->
+                <!-- <button mat-button >
                 <mat-card-title (click)="click">Take a Note
                     
                         <mat-card-subtitle>This is Sub Title</mat-card-subtitle>
                       
                 </mat-card-title>
               </button>
-              <!-- </mat-card-header> -->
+               </mat-card-header> -->
       
-        </mat-card>
-    </mat-drawer-container>
+        <!-- </mat-card>
+    </mat-drawer-container> --> 
+    <mat-accordion >
+        <mat-expansion-panel  class="noteInputBar" (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+              <textarea class="addNoteInput" placeholder="{{panelOpenState ? 'Title' : 'Take a note....'}}"></textarea>
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+        <textarea class="addNoteInput" placeholder="Take a Note...."></textarea>
+        
+        <mat-action-row>
+            <div style="width:85cm">
+            <button mat-icon-button >
+                <!-- <mat-icon class="mat-18">dashboard</mat-icon> -->
+                <mat-icon class="add_alert" >add_alert</mat-icon>
+              </button>
+              <button mat-icon-button>
+                  <!-- <mat-icon class="mat-18">dashboard</mat-icon> -->
+                  <mat-icon class="person_add">person_add</mat-icon>
+                </button>
+                <button mat-icon-button [matMenuTriggerFor]="colorPalatte">
+                    <!-- <mat-icon class="mat-18">dashboard</mat-icon> -->
+                    <mat-icon class="palette">palette</mat-icon>
+                  </button>
+                  <button mat-icon-button>
+                      <!-- <mat-icon class="mat-18">dashboard</mat-icon> -->
+                      <mat-icon class="image">image</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                      <!-- <mat-icon class="mat-18">dashboard</mat-icon> -->
+                      <mat-icon class="archive">archive</mat-icon>
+                    </button>
+                    <button mat-icon-button  [matMenuTriggerFor]="moreMenu">
+                      <!-- <mat-icon class="mat-18">dashboard</mat-icon> -->
+                      <mat-icon class="more_vert">more_vert</mat-icon>
+                    </button>
+                  </div>
+                  <mat-accordion>
+                      
+                      <button mat-button (click)="close()">Close
+                    
+                      <!-- <mat-icon class="mat-18">power_settings_new</mat-icon> Logout -->
+                    </button>
+                  </mat-accordion>
+
+                  <!-- <button mat-button >Close</button> -->
+        </mat-action-row>
+          <!-- <hideToggle></hideToggle> -->
+      </mat-expansion-panel>
+    </mat-accordion>                    
+                  </mat-drawer-container>
+                         <mat-menu #moreMenu="matMenu">
+                      
+                      <button mat-menu-item (click)="addLable()">Add Lable</button>
+                      <button mat-menu-item disabled="true" (click)="addDraw()">Add Drawing</button>
+
+                      <button mat-menu-item (click)="showCheckbox()">Show checkboxes</button>
+                    </mat-menu>
+                    <mat-menu #colorPalatte="matMenu">
+                        <!-- <canvas id="colorCanvas" class="color-canvas" width="250" height="250"></canvas> -->
+                        <datalist id="greyscale">
+                            <option value="#000000">
+                            <option value="#333333">
+                            <option value="#666666">
+                            <option value="#999999">
+                            <option value="#cccccc">
+                        </datalist>
+                        <fieldset class="col">
+                            <legend>Color element 2</legend>
+                            <label for="excolor2">Color: </label>
+                            <input type="color" id="excolor2" name="excolor2" list="greyscale">
+                        </fieldset>
+                      
+                       
+                      </mat-menu>
+   

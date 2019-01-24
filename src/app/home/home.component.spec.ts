@@ -23,7 +23,7 @@ describe('HomeComponent', () => {
         MatCardModule,
         MatGridListModule,
         MatIconModule,
-        MatMenuModule,
+        MatMenuModule
         
       ]
     })

@@ -11,8 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddNoteComponent } from './add-note/add-note.component';
 import { TrashComponent } from './trash/trash.component';
 import { ArchiveComponent } from './archive/archive.component';
-
-
+import {MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule} from '@angular/material';
+import { LayoutModule } from '@angular/cdk/layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +21,13 @@ import { ArchiveComponent } from './archive/archive.component';
     HomeComponent,
     AddNoteComponent,
     TrashComponent,
-    ArchiveComponent
+    ArchiveComponent,
+  
+    
+    
+
+  
+    
   ],
   imports: [
     BrowserAnimationsModule,
@@ -29,7 +35,12 @@ import { ArchiveComponent } from './archive/archive.component';
     AppRoutingModule,
     CustomMaterialModule,
     FormsModule,
-    
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
