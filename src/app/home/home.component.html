@@ -19,20 +19,34 @@
 
   </div>
 
-  <div class="endToolBar">
-
+  
+    <div>
+        <button mat-icon-button>
+            <!-- <mat-icon class="mat-18">dashboard</mat-icon> -->
+            <mat-icon class="refresh">refresh</mat-icon>
+          </button>
       <button mat-icon-button>
           <mat-icon class="view_list">view_list</mat-icon>
           <!-- <mat-icon class="settings">settings</mat-icon> -->
         </button>
+        <button mat-icon-button class="settings"[matMenuTriggerFor]="settingsForHeader" >
+            <!-- <mat-icon class="mat-18">dashboard</mat-icon> -->
+            <mat-icon class="settings">settings</mat-icon>
+          </button>
+        </div>
+        <div>
     <button mat-icon-button>
       <mat-icon class="mat-18">dashboard</mat-icon>
       <!-- <mat-icon class="settings">settings</mat-icon> -->
     </button>
     <button mat-icon-button>
-        <!-- <mat-icon class="mat-18">dashboard</mat-icon> -->
+     <mat-icon class="mat-18">notifications</mat-icon>
+
+    </button>
+    <!-- <button mat-icon-button>
+         <mat-icon class="mat-18">dashboard</mat-icon> 
         <mat-icon class="settings">settings</mat-icon>
-      </button>
+      </button> -->
       <button mat-icon-button class="accountButton" [matMenuTriggerFor]="accountMenu">
           <!-- <mat-icon class="mat-18">dashboard</mat-icon> -->
           <mat-icon class="account_circle">account_circle</mat-icon>

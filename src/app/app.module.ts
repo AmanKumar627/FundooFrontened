@@ -13,6 +13,12 @@ import { TrashComponent } from './trash/trash.component';
 import { ArchiveComponent } from './archive/archive.component';
 import {MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule} from '@angular/material';
 import { LayoutModule } from '@angular/cdk/layout';
+import { RemindersComponent } from './reminders/reminders.component';
+import { UserserviceService } from './user-service.service';
+import {login} from './models/login.model';
+import {HttpClientModule} from '@angular/common/http';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +28,10 @@ import { LayoutModule } from '@angular/cdk/layout';
     AddNoteComponent,
     TrashComponent,
     ArchiveComponent,
-  
+    RemindersComponent,
+    ForgotpasswordComponent,
+    
+    
     
     
 
@@ -40,7 +49,9 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    HttpClientModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

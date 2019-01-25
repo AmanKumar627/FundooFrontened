@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon'
 import {
   MatButtonModule, MatCardModule, MatDialogModule, MatInputModule, MatTableModule,
-  MatToolbarModule, MatMenuModule, MatProgressSpinnerModule,MatListModule,MatExpansionModule
+  MatToolbarModule, MatMenuModule, MatProgressSpinnerModule,MatListModule,MatExpansionModule,MatSnackBarModule,
 } from '@angular/material';
 @NgModule({
   imports: [
@@ -22,7 +22,8 @@ import {
   MatListModule,
   MatSidenavModule,
   MatExpansionModule,
-  BrowserAnimationsModule
+  BrowserAnimationsModule,
+  MatSnackBarModule
   ],
   exports: [
   CommonModule,
@@ -38,7 +39,8 @@ import {
    MatSidenavModule,
    MatListModule,
    MatExpansionModule,
-   BrowserAnimationsModule
+   BrowserAnimationsModule,
+   MatSnackBarModule
    ],
 })
 export class CustomMaterialModule { }
