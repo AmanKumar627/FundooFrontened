@@ -35,6 +35,12 @@ export class UserserviceService {
     return this.http.post<login>(this.userUrl+'login',logIn,{headers: new HttpHeaders().set("jwtTokenxxx","")
     ,observe:'response'});
   }
-}
+  public resetPassword(login : login) : any {
+    return this.http.post<login>(this.userUrl+"forgetPassword",login);
+  }
+  public resetUserOtp(otpUser : userOtp) : any{
+    return this.http.post<userOtp>(this.userUrl+'forgetOtpVerification',otpUser);
 
+}
+}
 
