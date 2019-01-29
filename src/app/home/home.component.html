@@ -77,7 +77,7 @@
       <mat-drawer-container class="example-container">
           <mat-drawer #sidenav mode="side" opened="true">
       <div>
-        <button mat-button  (click)="addNote()" [ngClass]="{'sideNavListItems': headerName!='Fundoo Notes', 'sideNavlistItemsColored': headerName=='Fundoo Notes'}">
+        <button mat-button  [routerLink]="['add-note()']" [ngClass]="{'sideNavListItems': headerName!='Fundoo Notes', 'sideNavlistItemsColored': headerName=='Fundoo Notes'}">
           <mat-icon>lightbulb_outline</mat-icon> Notes
             <button mat-button (click)="remainder()" ></button>
     </button>
@@ -95,6 +95,7 @@
       <div>
         <button mat-button  (click)="archive()" [ngClass]="{'sideNavListItems': headerName!='Archive', 'sideNavlistItemsColored': headerName=='Archive'}">
           <mat-icon>archive</mat-icon> Archive
+
         </button>
       </div>
       <div>
@@ -135,7 +136,7 @@
                 <!-- <mat-icon class="mat-18">dashboard</mat-icon> -->
                 <mat-icon class="add_alert" >add_alert</mat-icon>
               </button>
-              <button mat-icon-button>
+              <button mat-icon-button>0.
                   <!-- <mat-icon class="mat-18">dashboard</mat-icon> -->
                   <mat-icon class="person_add">person_add</mat-icon>
                 </button>

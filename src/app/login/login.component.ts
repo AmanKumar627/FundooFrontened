@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
               console.log(response)
              
               localStorage.setItem('jwtToken',response.headers.get('jwttokenxxx')); 
-              this.router.navigate(['ng home'])           
+              this.router.navigate(['/home'])           
           }
   
           else{

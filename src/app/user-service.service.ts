@@ -20,7 +20,7 @@ export class UserserviceService {
 
   constructor(private http: HttpClient) { }
 
-  private userUrl = 'http://localhost:8080/fundoo/';
+  private userUrl = 'http://localhost:8080/fundoo/'
 
   public createUser(user: register) :any {
     console.log(this.userUrl+'sendOtp')
