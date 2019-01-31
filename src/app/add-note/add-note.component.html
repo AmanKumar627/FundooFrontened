@@ -3,9 +3,9 @@
   <mat-card *ngIf=!barshow (click)="fullCardShow()" style="min-width: 300px; margin:0px" aria-disabled="true">
       Take a note ...
      
-            <button mat-icon-button (click)="addNewList()" matTooltip="New List" style="left: 6.3cm">
+              <button mat-icon-button (click)="addNewList()" matTooltip="New List" style="left: 6.3cm">
           <mat-icon aria-label="Example icon-button with a heart icon">
-              check_box
+              check_box 
 
           </mat-icon>
         </button>
@@ -17,16 +17,16 @@
         <button mat-icon-button (click)="addImage()" matTooltip="New note with image" style="left: 6.6cm">
             <mat-icon aria-label="Example icon-button with a heart icon">
               image
-            </mat-icon>
+            </mat-icon> 
           </button>
     </mat-card>
     <mat-card *ngIf=barshow>
 
 <mat-card-title>
-  <!-- <input matInput class="takeanote" [(ngModel)]="note.title" placeholder="title" id="title"  style="margin-left:0px;" > </mat-card-title> -->
+  
   <textarea class="takeanote" placeholder="Title" [(ngModel)]="note.title" style="margin-left:0px;">
-     
-      </button>
+  </button>
+      
   </textarea>
 
 </mat-card-title>
@@ -101,4 +101,6 @@
 <h1 >       Notes you add appear here
 </h1>
 </div>
+</div>
+
 </div>

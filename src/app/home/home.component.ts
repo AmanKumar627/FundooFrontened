@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     this.router.navigate(["addNote"])
   }
   remainder():void{
-    this.router.navigate(["remainder"])
+    this.router.navigate(["reminder"])
   }
   archive():void{
     this.router.navigate(["archive"])

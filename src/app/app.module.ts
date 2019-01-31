@@ -20,6 +20,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { OtpVerficationComponent } from './otp-verfication/otp-verfication.component';
+
 @NgModule({
   declarations: [
     AppComponent,

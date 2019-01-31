@@ -2,26 +2,28 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import{LoginComponent} from './login/login.component';
 import {HttpClientModule} from '@angular/common/http';
-;import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { TrashComponent } from './trash/trash.component';
 import { AddNoteComponent } from './add-note/add-note.component';
 import { ArchiveComponent } from './archive/archive.component';
 import {ForgotpasswordComponent} from './forgotpassword/forgotpassword.component';
 import { OtpVerficationComponent } from './otp-verfication/otp-verfication.component';
+import { RemindersComponent } from './reminders/reminders.component';
 const routes: Routes = [
+  {path: 'reminder',component:RemindersComponent},
   {path: 'register', component: RegisterComponent},
   {path: '',component:LoginComponent},
   {path:'archive',component:ArchiveComponent},
   {path: 'forgotpassword',component:ForgotpasswordComponent},
   {path:'otp-verification',component:OtpVerficationComponent},
   {path:'home',component:HomeComponent,
-  children:[{
-   path:'trash',component:TrashComponent},
-   {path:'addNote',component:AddNoteComponent},
-
+    children:[
+   {path:'trash',component:TrashComponent},
+   {path:'addNote',component:AddNoteComponent}
   ]
-  }];
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
